@@ -5,14 +5,19 @@ import { fetchApiData } from '../helper/fetchApiData';
 export function GetRepoData({ userName, numOfrepos, showStars, showLanguage }) {
   const [repoData, setRepoData] = useState([]);
   useEffect(() => {
-    fetchApiData(userName).then(setRepoData);
+    console.log("fetch")
+    fetchApiData(userName).then( setRepoData);
+    
   }, [userName]);
   return (
+    <div>
     <DisplaySortedRepoData
       showLanguage={showLanguage}
       showStars={showStars}
       numOfrepos={numOfrepos}
       repoData={repoData}
-    />
+      />
+      {console.log("show"+repoData)}
+      </div>
   );
 }
