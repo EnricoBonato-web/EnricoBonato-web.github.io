@@ -4,7 +4,6 @@ import Button from "react-bootstrap/Button";
 import { BiLinkExternal } from "react-icons/bi";
 
 function ProjectCards(props) {
-  console.log("props"+JSON.stringify( props));
   return (
     <Card className="project-card-view">
       {console.log("card:"+props.title)}
