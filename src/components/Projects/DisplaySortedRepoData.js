@@ -1,29 +1,29 @@
 import React from 'react';
 import { sortByMostRecentDate } from '../helper/sortByMostRecentDate';
 import { arrayToLength } from '../helper/arrayToLength';
+import { Col } from 'react-bootstrap';
 import styles from '../styles.module.css';
 import ProjectCards from './ProjectCards';
 
 function DisplaySortedRepoData({ repoData, numOfrepos, showStars, showLanguage }) {
-  const sortedRepos = sortByMostRecentDate(repoData);
-  const sortedAndReducedRepos = arrayToLength(sortedRepos, numOfrepos);
-  console.log('sorted' + sortedAndReducedRepos);
-  return (
+  console.log('sorted' + repoData);
+  const text = (
+      <Col>
     <div className={styles.repoContainer}>
-      {sortedAndReducedRepos
-        ? sortedAndReducedRepos.map(repo => (
-          
+        {repoData.map(repo => {
+          return (
             <ProjectCards
               key={repo.id}
               title={repo.name}
               description={repo.description}
-              link={repo.url}
+              link={repo.html_url}
             ></ProjectCards>
-          ))
-        : null}
-      {console.log('prova')}
-      <ProjectCards key="123" title="prova" description="prova" link="prova" />
+          );
+        })}
     </div>
+      </Col>
   );
+
+  return text;
 }
 export default DisplaySortedRepoData;
