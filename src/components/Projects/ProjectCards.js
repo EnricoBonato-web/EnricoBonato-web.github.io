@@ -5,9 +5,11 @@ import { BiLinkExternal } from 'react-icons/bi';
 
 function ProjectCards(props) {
   let img = props.imgPath;
-  img = img.toLocaleLowerCase();
-  if (img === 'html') img = 'html5'.toLocaleUpperCase();
-  if (img === 'css') img = 'css3'.toLocaleUpperCase();
+  if (img) {
+    img = img.toLocaleLowerCase();
+    if (img === 'html') img = 'html5'.toLocaleUpperCase();
+    if (img === 'css') img = 'css3'.toLocaleUpperCase();
+  }
   return (
     <Card className="project-card-view">
       <Card.Img
