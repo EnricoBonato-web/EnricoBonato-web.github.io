@@ -1,10 +1,7 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import {
-  AiFillGithub,
-  AiFillInstagram,
-} from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
+import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import { AiFillGithub, AiFillInstagram } from 'react-icons/ai';
+import { FaLinkedinIn } from 'react-icons/fa';
 
 function Footer() {
   let date = new Date();
@@ -13,7 +10,10 @@ function Footer() {
     <Container fluid className="footer">
       <Row>
         <Col md="4" className="footer-copywright">
-          <h3>Template by Soumyajit Behera<br/> implemented by Enrico Bonato</h3>
+          <h3>
+            Template by Soumyajit Behera
+            <br /> implemented by Enrico Bonato
+          </h3>
         </Col>
         <Col md="4" className="footer-copywright">
           <h3>Copyright © {year} EB</h3>
@@ -23,8 +23,8 @@ function Footer() {
             <li className="social-icons">
               <a
                 href="https://github.com/EnricoBonato-web"
-                style={{ color: "white" }}
-                target="_blank" 
+                style={{ color: 'white' }}
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <AiFillGithub />
@@ -33,8 +33,8 @@ function Footer() {
             <li className="social-icons">
               <a
                 href="https://www.linkedin.com/in/EnricoBonato-web/"
-                style={{ color: "white" }}
-                target="_blank" 
+                style={{ color: 'white' }}
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaLinkedinIn />
@@ -43,8 +43,8 @@ function Footer() {
             <li className="social-icons">
               <a
                 href="https://www.instagram.com/booonnyy/"
-                style={{ color: "white" }}
-                target="_blank" 
+                style={{ color: 'white' }}
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <AiFillInstagram />
