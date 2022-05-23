@@ -6,9 +6,15 @@ import {
   DiReact,
   DiNodejs,
   DiGit,
+
 } from "react-icons/di";
 import {
   SiNextdotjs,
+  SiCss3,
+  SiCsharp,
+  SiHtml5,
+  SiCplusplus,
+  SiJava,
 } from "react-icons/si";
 
 function Techstack() {
@@ -21,6 +27,12 @@ function Techstack() {
         <DiJavascript1 />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
+        <SiCss3 />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiHtml5/>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
         <DiNodejs />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
@@ -30,7 +42,16 @@ function Techstack() {
         <SiNextdotjs />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
+        <SiCsharp />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiCplusplus />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiJava />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiCplusplus />
       </Col>
     </Row>
   );
