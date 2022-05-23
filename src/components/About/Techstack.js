@@ -5,8 +5,6 @@ import {
   DiJavascript1,
   DiReact,
   DiNodejs,
-  DiGit,
-
 } from "react-icons/di";
 import {
   SiNextdotjs,
@@ -49,9 +47,6 @@ function Techstack() {
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiJava />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiCplusplus />
       </Col>
     </Row>
   );
