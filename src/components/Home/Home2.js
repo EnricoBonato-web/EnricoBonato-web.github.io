@@ -68,7 +68,7 @@ function Home2() {
              
               <li className="social-icons">
                 <a
-                  href="www.linkedin.com/in/enrico-bonato-685b7615b"
+                  href="https://www.linkedin.com/in/enrico-bonato-685b7615b"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
