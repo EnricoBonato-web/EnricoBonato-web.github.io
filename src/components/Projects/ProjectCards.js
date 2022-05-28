@@ -30,8 +30,11 @@ function ProjectCards(props) {
   };
   console.log(props.imgPath);
   let img = props.imgPath.toLocaleLowerCase();
-  const immagine = React.createElement(icons[img],{style:{height:"100px",margin:"10px"},className:"card-img"});
-  
+  const immagine = React.createElement(icons[img], {
+    style: { height: "100px", margin: "10px" },
+    className: "card-img",
+  });
+
   console.log(icons.img);
   return (
     <Card className="project-card-view">
