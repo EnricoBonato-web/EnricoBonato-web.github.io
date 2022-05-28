@@ -2,10 +2,19 @@ import React from 'react';
 import { Col } from 'react-bootstrap';
 import ProjectCards from './ProjectCards';
 import {  Row } from 'react-bootstrap';
-
+//https://github.com/KaleidosCodeTeam/SWEDesigner-source
 function DisplaySortedRepoData({ repoData, numOfrepos, showStars, showLanguage }) {
   const text = (
     <Row style={{ justifyContent: 'center', paddingBottom: '10px' }}>
+      <Col md={4} className="project-card" key={0}>
+            <ProjectCards
+              key={0}
+              title={"SWEDesigner-source"}
+              description={"repo.description"}
+              link={"https://github.com/KaleidosCodeTeam/SWEDesigner-source"}
+              imgPath={"Nodejs"}
+            ></ProjectCards>
+          </Col>
       {repoData.sort((a,b)=>a.id<b.id?1:-1).map(repo => {
         return (
           <Col md={4} className="project-card" key={repo.id}>

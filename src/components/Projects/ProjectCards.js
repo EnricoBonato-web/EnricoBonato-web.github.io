@@ -1,34 +1,49 @@
-import React from 'react';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
-import { BiLinkExternal } from 'react-icons/bi';
+import React from "react";
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
+import { BiLinkExternal } from "react-icons/bi";
+import {
+  DiJavascript1 as javascript,
+  DiReact as react,
+  DiNodejs as nodejs,
+} from "react-icons/di";
+import {
+  SiNextdotjs as node,
+  SiCss3 as css,
+  SiTypescript as typescript,
+  SiPhp as php,
+  SiHtml5 as html,
+  SiJava as java,
+} from "react-icons/si";
 
 function ProjectCards(props) {
-  let img = props.imgPath;
-  if (img) {
-    img = img.toLocaleLowerCase();
-    if (img === 'html') img = 'html5'.toLocaleUpperCase();
-    if (img === 'css') img = 'css3'.toLocaleUpperCase();
-  }
+  const icons = {
+    typescript,
+    php,
+    javascript,
+    react,
+    nodejs,
+    node,
+    css,
+    html,
+    java,
+  };
+  console.log(props.imgPath);
+  let img = props.imgPath.toLocaleLowerCase();
+  const immagine = React.createElement(icons[img],{style:{height:"100px",margin:"10px"},className:"card-img"});
+  
+  console.log(icons.img);
   return (
     <Card className="project-card-view">
-      <Card.Img
-        variant="top"
-        src={(
-          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/' +
-          img +
-          '/' +
-          img +
-          '-original.svg'
-        ).toLocaleLowerCase()}
-        alt={img}
-      />
+      {immagine}
       <Card.Body>
         <Card.Title>{props.title}</Card.Title>
-        <Card.Text style={{ textAlign: 'justify' }}>{props.description}</Card.Text>
+        <Card.Text style={{ textAlign: "justify" }}>
+          {props.description}
+        </Card.Text>
         <Button variant="primary" href={props.link} target="_blank">
           <BiLinkExternal /> &nbsp;
-          {props.isBlog ? 'View Blog' : 'View Project'}
+          {props.isBlog ? "View Blog" : "View Project"}
         </Button>
       </Card.Body>
     </Card>
