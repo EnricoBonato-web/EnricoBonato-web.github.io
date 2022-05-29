@@ -10,7 +10,7 @@ function DisplaySortedRepoData({ repoData, numOfrepos, showStars, showLanguage }
             <ProjectCards
               key={0}
               title={"SWEDesigner-source"}
-              description={"repo.description"}
+              description={"website that allows users to draw UML diagrams and get the Java and Javascript source code."}
               link={"https://github.com/KaleidosCodeTeam/SWEDesigner-source"}
               imgPath={"Nodejs"}
             ></ProjectCards>
