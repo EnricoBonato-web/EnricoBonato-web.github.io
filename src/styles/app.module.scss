@@ -1,0 +1,58 @@
+@import "./var.scss";
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: $color-white;
+  }
+  
+  .title {
+    font-size: 24px;
+    color: $color-gray-dark;
+  }
+  
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $color-primary-darkest;
+    padding: 24px 0px;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .navLinks {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    margin: auto 32px;
+    padding: 0;
+  }
+  
+  .navLinks li {
+    cursor: pointer;
+    color: $color-white;
+    font-weight: bold;
+  }
+  
+  .navLinks li:hover {
+    text-decoration: underline;
+  }
+  
+  .section{
+    min-height: 400px;
+  }
+
+  .logo{
+    max-height: 45px;
+    padding: 0 24px;
+  }
+  .sections{
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+  }

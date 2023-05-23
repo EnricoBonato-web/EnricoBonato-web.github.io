@@ -1,0 +1,77 @@
+@import "./var.scss";
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  min-height: 400px;
+  // background: linear-gradient(150deg, transparent 0 50%, white 50% 100%);
+}
+
+.heroContent {
+  text-align: center;
+  z-index: 100;
+}
+
+.heroTitle {
+  font-size: 36px;
+  color: $color-gray-light;
+  margin-bottom: 20px;
+}
+
+.heroText {
+  font-size: 18px;
+  color: $color-gray-light;
+  margin-bottom: 40px;
+}
+
+.ctaButton {
+  background-color: $color-primary;
+  color: #f2f2f2;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.custom-shape-divider-top-1684345891 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1684346091 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1684346091 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 64px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1684346091 .shape-fill {
+  fill: #252525;
+}
+.background {
+  transform: rotate(150deg);
+  width: 200%;
+  min-width: 1000px;
+  position: fixed;
+  top: 40%;
+  height: 10%;
+  z-index: -10;
+}

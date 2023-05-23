@@ -1,0 +1,44 @@
+@import "./var.scss";
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  color: white;
+  gap: 32px;
+  margin: 24px;
+}
+.project {
+  background-color: rebeccapurple;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  justify-content: stretch;
+  &__title {
+    font-size: large;
+    padding: 8px;
+  }
+  &__description {
+    padding: 8px;
+    flex-grow: 1;
+  }
+  &__link {
+    padding: 8px;
+    border: solid white 1px;
+    border-radius: 4px;
+    background-color: red;
+    margin: 16px;
+    display: block;
+    text-decoration: none;
+    color: white;
+  }
+  .icon {
+    height: 48px;
+    width: 48px;
+    margin: 10px auto;
+  }
+}
+.container {
+  padding: 48px 24px;
+  text-align: center;
+}
