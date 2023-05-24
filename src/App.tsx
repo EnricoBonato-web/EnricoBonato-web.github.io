@@ -1,15 +1,15 @@
-import React from "react";
-import { useRef } from "react";
-import styles from "./styles/app.module.scss";
-import Hero from "./components/Hero";
-import Background from "./components/Background";
-import GradientBackground from "./components/GradientBackground";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Contacts from "./components/Contacts";
-import Work from "./components/Work";
-import Projects from "./components/Projects/Projects";
-import Particle from "./components/Particle";
+import React from 'react';
+import { useRef } from 'react';
+import styles from './styles/app.module.scss';
+import Hero from './components/Hero';
+import Background from './components/Background';
+import GradientBackground from './components/GradientBackground';
+import About from './components/About';
+import Skills from './components/Skills';
+import Contacts from './components/Contacts';
+import Work from './components/Work';
+import Projects from './components/Projects/Projects';
+import Particle from './components/Particle';
 
 const App: React.FC = () => {
   const section1Ref = useRef<HTMLElement>(null);
@@ -20,13 +20,13 @@ const App: React.FC = () => {
 
   const scrollToSection = (ref: React.RefObject<HTMLElement>) => {
     if (ref.current) {
-      ref.current.scrollIntoView({ behavior: "smooth" });
+      ref.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
     <div>
-        <Particle/>
+      <Particle />
       <header className={styles.header}>
         <img src="./logo.png" alt="EnricoBonato" className={styles.logo} />
         <ul className={styles.navLinks}>
@@ -39,26 +39,26 @@ const App: React.FC = () => {
       </header>
 
       <main>
-          <div className={styles.sections}>
-            <section ref={section1Ref} className={styles.section}>
-              <Hero f={() => scrollToSection(section5Ref)} />
-            </section>
-            <section ref={section2Ref} className={styles.section}>
-              <About />
-            </section>
-            <section ref={section3Ref} className={styles.section}>
-              <Work />
-            </section>
-            <section ref={section3Ref} className={styles.section}>
-              <Projects />
-            </section>
-            <section ref={section4Ref} className={styles.section}>
-              <Skills />
-            </section>
-            <section ref={section5Ref} className={styles.section}>
-              <Contacts />
-            </section>
-          </div>
+        <div className={styles.sections}>
+          <section ref={section1Ref} className={styles.section}>
+            <Hero f={() => scrollToSection(section5Ref)} />
+          </section>
+          <section ref={section2Ref} className={styles.section}>
+            <About />
+          </section>
+          <section ref={section3Ref} className={styles.section}>
+            <Work />
+          </section>
+          <section ref={section3Ref} className={styles.section}>
+            <Projects />
+          </section>
+          <section ref={section4Ref} className={styles.section}>
+            <Skills />
+          </section>
+          <section ref={section5Ref} className={styles.section}>
+            <Contacts />
+          </section>
+        </div>
       </main>
     </div>
   );
