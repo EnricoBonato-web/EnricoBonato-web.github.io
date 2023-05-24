@@ -2,10 +2,17 @@
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   color: white;
   gap: 32px;
   margin: 24px;
+  @include for-tablet-landscape-up{
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+  @include for-desktop-up{
+    grid-template-columns: repeat(3, 1fr);
+
+  }
 }
 .project {
   background-color: rebeccapurple;
