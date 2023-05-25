@@ -1,5 +1,6 @@
-import React from "react";
-import style from "../styles/toolstack.module.scss";
+import React from 'react';
+import style from '../styles/toolstack.module.scss';
+import Planet from './Planet';
 import {
   SiLinux,
   SiVisualstudiocode,
@@ -8,8 +9,8 @@ import {
   SiQt,
   SiGit,
   SiApple,
-  SiGitlab,
-} from "react-icons/si";
+  SiGitlab
+} from 'react-icons/si';
 
 const icons = [
   SiLinux,
@@ -19,23 +20,26 @@ const icons = [
   SiQt,
   SiGit,
   SiApple,
-  SiGitlab,
+  SiGitlab
 ];
 
 function Toolstack() {
   return (
-    <div className={style.container}>
-      {icons.map((icon) => {
-        return (
-          <div className={style.icons}>
-            {React.createElement(icon, {
-              style: {},
-              className: style.icon,
-            })}
-          </div>
-        );
-      })}
-    </div>
+    <Planet planet="uranus" planetSize={100}>
+      <div className={style.container}>
+        {icons.map((icon) => {
+          return (
+            <div className={style.icons} key={icon.name}>
+              {React.createElement(icon, {
+                style: {},
+                className: style.icon
+              })}
+              <p>{icon.name.substring(2)}</p>
+            </div>
+          );
+        })}
+      </div>
+    </Planet>
   );
 }
 

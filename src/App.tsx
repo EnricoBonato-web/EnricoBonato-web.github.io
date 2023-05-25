@@ -10,6 +10,7 @@ import Contacts from './components/Contacts';
 import Work from './components/Work';
 import Projects from './components/Projects/Projects';
 import Particle from './components/Particle';
+import HamburgerMenu from './components/Hamburger';
 
 const App: React.FC = () => {
   const section1Ref = useRef<HTMLElement>(null);
@@ -26,36 +27,38 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <Particle />
       <header className={styles.header}>
         <img src="./logo.png" alt="EnricoBonato" className={styles.logo} />
-        <ul className={styles.navLinks}>
+        <HamburgerMenu>
           <li onClick={() => scrollToSection(section1Ref)}>Section 1</li>
           <li onClick={() => scrollToSection(section2Ref)}>Section 2</li>
           <li onClick={() => scrollToSection(section3Ref)}>Section 3</li>
           <li onClick={() => scrollToSection(section4Ref)}>Section 4</li>
           <li onClick={() => scrollToSection(section5Ref)}>Section 5</li>
-        </ul>
+        </HamburgerMenu>
       </header>
 
       <main>
+        <span className={styles.sun}></span>
+        <div id="top"></div>
         <div className={styles.sections}>
-          <section ref={section1Ref} className={styles.section}>
+          <Particle />
+          <section ref={section1Ref} className={'section ' + styles.section}>
             <Hero f={() => scrollToSection(section5Ref)} />
           </section>
-          <section ref={section2Ref} className={styles.section}>
+          <section ref={section2Ref} className={'section ' + styles.section}>
             <About />
           </section>
-          <section ref={section3Ref} className={styles.section}>
+          <section ref={section3Ref} className={'section ' + styles.section}>
             <Work />
           </section>
-          <section ref={section3Ref} className={styles.section}>
+          <section ref={section3Ref} className={'section ' + styles.section}>
             <Projects />
           </section>
-          <section ref={section4Ref} className={styles.section}>
+          <section ref={section4Ref} className={'section ' + styles.section}>
             <Skills />
           </section>
-          <section ref={section5Ref} className={styles.section}>
+          <section ref={section5Ref} className={'section ' + styles.section}>
             <Contacts />
           </section>
         </div>

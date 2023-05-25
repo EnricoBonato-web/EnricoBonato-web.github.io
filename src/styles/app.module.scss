@@ -1,12 +1,11 @@
 @import "./var.scss";
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: $color-white;
+  html{
+    overflow-x: hidden;
+    width: 100%;
+    position: initial;
+    margin: 0;
+    padding: 0;
   }
-  
   .title {
     font-size: 24px;
     color: $color-gray-dark;
@@ -19,7 +18,7 @@
     width: 100%;
     background-color: $color-primary-darkest;
     padding: 24px 0px;
-    z-index: 1;
+    z-index: 100;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -44,7 +43,9 @@
   }
   
   .section{
-    min-height: 400px;
+    min-height: 600px;
+    scroll-margin-top: 200px;
+    overflow: hidden;
   }
 
   .logo{
@@ -54,5 +55,29 @@
   .sections{
     display: flex;
     flex-direction: column;
-    gap: 200px;
+    gap: 300px;
+    background-color: $color-primary-darkest;
+    padding: 24px 40px;
+    z-index: -100;
+    position: absolute;
+  }
+  .sun{
+
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  border-top: 0.25px solid rgba(255, 255, 255, 0.1);
+  border-left: 0.25px solid rgba(255, 255, 255, 0.1);
+  animation: MoveUpDown 4s linear infinite;
+  box-shadow: 1px 1px 400px 1px $color-white;
+  z-index: 2;
+  position: absolute;
+  top: -480px;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  border-radius: 100%;
+  transform: translate(-50%,0);
+  z-index: 1000;
+
+
   }

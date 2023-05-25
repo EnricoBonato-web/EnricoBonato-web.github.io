@@ -1,0 +1,33 @@
+
+@import './var.scss';
+.content {
+  height: 100%;
+  z-index: 40 !important;
+
+  position: unset;
+}
+.container{
+  overflow-x: hidden;
+}
+
+.orbit {
+  border:  $color-white solid 1px;
+  border-radius: 100%;
+  border-color: $color-white;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  opacity: 0.4;
+  z-index: -10;
+}
+.planet {
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 100%; 
+  margin: 0;
+  left: 50%;
+  top: 0;
+  position: absolute;
+  z-index: -5;
+  opacity: 0.9;
+}
