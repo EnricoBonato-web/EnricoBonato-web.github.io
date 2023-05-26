@@ -3,8 +3,7 @@
 .content {
   height: 100%;
   z-index: 40 !important;
-
-  position: unset;
+  position: relative;
 }
 .container{
   overflow-x: hidden;

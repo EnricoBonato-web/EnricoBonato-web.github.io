@@ -1,5 +1,5 @@
 @import "./var.scss";
-
+@include for-tablet-landscape-down{
 .menu {
     display: flex;
     flex-direction: column;
@@ -40,6 +40,8 @@
   }
   
   .items {
+    list-style: none;
+    padding: 0 20px ;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,6 +58,11 @@
     top: 100px;
     z-index: 100;
     color: $color-white;
+    li{
+
+    list-style: none;
+    padding:  16px 0;
+    }
   }
   
   .menu.open .items {
@@ -68,4 +75,22 @@
     z-index: 100;
     background-color: $color-primary-darkest;
   }
-  
+}
+@include for-tablet-landscape-up{
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: auto 32px;
+  padding: 0;
+}
+
+.navLinks li {
+  cursor: pointer;
+  color: $color-white;
+  font-weight: bold;
+}
+
+.navLinks li:hover {
+  text-decoration: none;
+}}

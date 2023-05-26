@@ -1,5 +1,19 @@
-@import "./var.scss";
-.container{
-    color: $color-white;
-    text-align: center;
+@import './var.scss';
+.container {
+  color: $color-white;
+  text-align: center;
+}
+.social {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 200px;
+  margin: auto;
+  padding: 0;
+  li {
+    svg {
+      height: 40px;
+    }
+  }
 }

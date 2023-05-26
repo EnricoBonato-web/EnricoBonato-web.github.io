@@ -1,11 +1,25 @@
-import React from 'react';
+import { useCallback } from 'react';
 import Particles from 'react-tsparticles';
+import type { Container, Engine } from 'tsparticles-engine';
+import { loadFull } from 'tsparticles';
 import style from '../styles/particel.module.scss';
 
-function Particle() {
+const Particle = () => {
+  const particlesInit = useCallback(async (engine: Engine) => {
+    console.log(engine);
+    await loadFull(engine);
+  }, []);
+
+  const particlesLoaded = useCallback(async (container: Container | undefined) => {
+    await console.log(container);
+  }, []);
+
   return (
+    // eslint-disable-next-line react/react-in-jsx-scope
     <Particles
       id={style.tsparticles}
+      init={particlesInit}
+      loaded={particlesLoaded}
       params={{
         particles: {
           number: {
@@ -21,7 +35,10 @@ function Particle() {
           },
           move: {
             direction: 'right',
-            speed: 0.05
+            enable: true,
+            random: false,
+            speed: 0.3,
+            straight: false
           },
           size: {
             value: 1
@@ -34,23 +51,10 @@ function Particle() {
             }
           }
         },
-        interactivity: {
-          events: {
-            onclick: {
-              enable: true,
-              mode: 'push'
-            }
-          },
-          modes: {
-            push: {
-              particles_nb: 1
-            }
-          }
-        },
         retina_detect: true
       }}
     />
   );
-}
+};
 
 export default Particle;

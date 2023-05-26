@@ -7,11 +7,11 @@ import {
   SiReact as Reactjs,
   SiVuedotjs as VueJs,
   SiCss3 as CSS3,
-  SiCsharp as Csharp,
+  // SiCsharp as Csharp,
   SiHtml5 as HTML5,
   SiSass as SASS
 } from 'react-icons/si';
-const icons = [Reactjs, VueJs, CSS3, Csharp, HTML5, SASS, Javascript, Node, Java, Cplusplus];
+const icons = [Reactjs, VueJs, CSS3, HTML5, SASS, Node, Java, Cplusplus];
 function Techstack() {
   return (
     <Planet planet="saturn" planetSize={100}>

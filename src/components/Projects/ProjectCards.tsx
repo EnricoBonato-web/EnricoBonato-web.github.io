@@ -1,20 +1,20 @@
-import React from "react";
-import { BiLinkExternal } from "react-icons/bi";
-import style from "../../styles/projects.module.scss";
+import React from 'react';
+import { BiLinkExternal } from 'react-icons/bi';
+import style from '../../styles/projects.module.scss';
 import {
   DiJavascript1 as JavascriptIcon,
   DiReact as ReactIcon,
   DiNodejs as NodejsIcon,
-  DiJava as JavaIcon,
-} from "react-icons/di";
+  DiJava as JavaIcon
+} from 'react-icons/di';
 import {
   SiNextdotjs as NextjsIcon,
   SiCss3 as CssIcon,
   SiTypescript as TypescriptIcon,
   SiPhp as PhpIcon,
   SiHtml5 as HtmlIcon,
-  SiVuedotjs as VueIcon,
-} from "react-icons/si";
+  SiVuedotjs as VueIcon
+} from 'react-icons/si';
 
 type ProjectCardsProps = {
   title: string;
@@ -35,17 +35,16 @@ function ProjectCards(props: ProjectCardsProps) {
     css: CssIcon,
     html: HtmlIcon,
     java: JavaIcon,
-    vue: VueIcon,
+    vue: VueIcon
   };
 
-  let img = props.imgPath.toLowerCase();
-  const IconComponent = icons.hasOwnProperty(img)
-    ? icons[img]
-    : icons["javascript"];
+  const img = props.imgPath.toLowerCase();
+  // eslint-disable-next-line no-prototype-builtins
+  const IconComponent = icons.hasOwnProperty(img) ? icons[img] : icons['javascript'];
 
   const immagine = React.createElement(IconComponent, {
     style: {},
-    className: style.icon,
+    className: style.icon
   });
 
   return (
@@ -57,10 +56,9 @@ function ProjectCards(props: ProjectCardsProps) {
         className={style.project__link}
         href={props.link}
         target="_blank"
-        rel="noopener noreferrer"
-      >
+        rel="noopener noreferrer">
         <BiLinkExternal /> &nbsp;
-        {props.isBlog ? "View Blog" : "View Project"}
+        {props.isBlog ? 'View Blog' : 'View Project'}
       </a>
     </div>
   );

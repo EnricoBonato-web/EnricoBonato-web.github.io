@@ -7,29 +7,51 @@ const Planet: React.FC<{ children: ReactNode; planet: string; planetSize: number
   planetSize = 100
 }) => {
   const [diameter, setDiameter] = useState(2000);
+
   useEffect(() => {
-    const childElement = document.getElementById(planet);
-    const topElement = document.getElementById('top');
-    if (childElement && topElement)
-      setDiameter(
-        2 *
-          ((childElement ? childElement.getBoundingClientRect().bottom : 0) -
-            topElement.getBoundingClientRect().top)
-      );
-  }, []);
-  const keyframes = `@-webkit-keyframes ${planet} {  from {
-    transform: translate(-${diameter / 2}px, -${diameter / 2 + 200}px) rotate(${
-    Math.sin(window.innerWidth / diameter) * 90 || 60
+    const updateDiameter = () => {
+      const childElement = document.getElementById(planet);
+      const topElement = document.getElementById('top');
+      if (childElement && topElement) {
+        const newDiameter =
+          300 +
+          2 *
+            ((childElement.getBoundingClientRect().bottom || 0) -
+              topElement.getBoundingClientRect().top);
+        setDiameter(newDiameter);
+      }
+    };
+
+    // Call the updateDiameter function when the window is resized
+    window.addEventListener('resize', updateDiameter);
+
+    // Call the updateDiameter function initially
+    updateDiameter();
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', updateDiameter);
+    };
+  }, [planet]);
+
+  const keyframes = `@-webkit-keyframes ${planet} {
+    from {
+      transform: translate(-${diameter / 2}px, -${diameter / 2 + 200}px) rotate(${
+    Math.sin(window.innerWidth / diameter) * 90 || 50
   }deg);
-  }
-  to {
-    transform: translate(-${diameter / 2}px, -${diameter / 2 + 200}px) rotate(-${
-    Math.sin(window.innerWidth / diameter) * 90 || 60
+    }
+    to {
+      transform: translate(-${diameter / 2}px, -${diameter / 2 + 200}px) rotate(-${
+    Math.sin(window.innerWidth / diameter) * 90 || 50
   }deg);
-  }
-    }`;
-  const styleSheet = document.styleSheets[0];
-  styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
+    }
+  }`;
+
+  useEffect(() => {
+    const styleSheet = document.styleSheets[0];
+    styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
+  }, [keyframes]);
+
   return (
     <div className={style.container}>
       <div
@@ -45,7 +67,7 @@ const Planet: React.FC<{ children: ReactNode; planet: string; planetSize: number
           backgroundImage: `url(${planet}.gif)`,
           width: diameter + planetSize,
           height: diameter + planetSize,
-          animation: `${planet}  20s infinite linear `,
+          animation: `${planet} 20s infinite linear`,
           margin: `-${planetSize / 2}px`,
           backgroundSize: planetSize
         }}></div>

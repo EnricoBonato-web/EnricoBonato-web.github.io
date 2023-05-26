@@ -16,6 +16,11 @@ $color-white: #ffffff;
     @content;
   }
 }
+@mixin for-tablet-landscape-down {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
 @mixin for-tablet-landscape-up {
   @media (min-width: 900px) {
     @content;

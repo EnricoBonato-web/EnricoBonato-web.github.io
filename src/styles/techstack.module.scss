@@ -1,24 +1,27 @@
-@import "./var.scss";
+@import './var.scss';
 
 .icon {
-    height: 40px;
-    width: 40px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin: auto;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
 }
 .icons {
-    color: $color-white;
-    padding: 40px;
-    margin: auto;
-    p {
-      text-align: center;
-    }
-
+  color: $color-white;
+  padding: 40px;
+  margin: auto;
+  p {
+    text-align: center;
+  }
+  word-break:break-all;
 }
 .container {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-
+  overflow: hidden;
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  @include for-phone-only{
+    grid-template-columns: repeat(2, 1fr);}
 }

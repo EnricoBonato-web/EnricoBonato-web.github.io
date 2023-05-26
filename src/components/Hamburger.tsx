@@ -15,7 +15,7 @@ const HamburgerMenu: React.FC<{ children: ReactNode }> = ({ children }) => {
         <span></span>
         <span></span>
       </div>
-      <ul className={style.items} onClick={toggleMenu}>
+      <ul className={style.items + ' ' + style.navLinks} onClick={toggleMenu}>
         {children}
       </ul>
     </div>

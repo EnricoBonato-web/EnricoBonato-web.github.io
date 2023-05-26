@@ -15,8 +15,13 @@
   p {
     text-align: center;
   }
+  word-break:break-all;
 }
 .container {
+  overflow: hidden;
   display: grid;
+  max-width: 100%;
   grid-template-columns: repeat(4, 1fr);
+  @include for-phone-only{
+    grid-template-columns: repeat(2, 1fr);}
 }
