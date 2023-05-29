@@ -7,6 +7,7 @@ const Planet: React.FC<{ children: ReactNode; planet: string; planetSize: number
   planetSize = 100
 }) => {
   const [diameter, setDiameter] = useState(2000);
+  const [position, setPosition] = useState(0);
 
   useEffect(() => {
     const updateDiameter = () => {
@@ -14,34 +15,31 @@ const Planet: React.FC<{ children: ReactNode; planet: string; planetSize: number
       const topElement = document.getElementById('top');
       if (childElement && topElement) {
         const newDiameter =
-          300 +
+          100 +
           2 *
             ((childElement.getBoundingClientRect().bottom || 0) -
               topElement.getBoundingClientRect().top);
         setDiameter(newDiameter);
+        setPosition(
+          (childElement.getBoundingClientRect().top || 0) - topElement.getBoundingClientRect().top
+        );
       }
     };
-
-    // Call the updateDiameter function when the window is resized
     window.addEventListener('resize', updateDiameter);
-
-    // Call the updateDiameter function initially
     updateDiameter();
-
-    // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener('resize', updateDiameter);
     };
-  }, [planet]);
+  }, []);
 
   const keyframes = `@-webkit-keyframes ${planet} {
     from {
-      transform: translate(-${diameter / 2}px, -${diameter / 2 + 200}px) rotate(${
+      transform: translate(-${diameter / 2}px, -${diameter / 2 + position}px) rotate(${
     Math.sin(window.innerWidth / diameter) * 90 || 50
   }deg);
     }
     to {
-      transform: translate(-${diameter / 2}px, -${diameter / 2 + 200}px) rotate(-${
+      transform: translate(-${diameter / 2}px, -${diameter / 2 + position}px) rotate(-${
     Math.sin(window.innerWidth / diameter) * 90 || 50
   }deg);
     }
@@ -54,12 +52,15 @@ const Planet: React.FC<{ children: ReactNode; planet: string; planetSize: number
 
   return (
     <div className={style.container}>
+      <div id={planet} className={style.content}>
+        {children}
+      </div>
       <div
         className={style.orbit}
         style={{
           width: diameter,
           height: diameter,
-          transform: `translate(-${diameter / 2}px, -${diameter / 2 + 200}px)`
+          transform: `translate(-${diameter / 2}px, -${diameter / 2 + position}px)`
         }}></div>
       <div
         className={style.planet}
@@ -71,9 +72,6 @@ const Planet: React.FC<{ children: ReactNode; planet: string; planetSize: number
           margin: `-${planetSize / 2}px`,
           backgroundSize: planetSize
         }}></div>
-      <div id={planet} className={style.content}>
-        {children}
-      </div>
     </div>
   );
 };

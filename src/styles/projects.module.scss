@@ -1,6 +1,7 @@
 @import "./var.scss";
 
 .projects {
+  min-height: 1000px;
   display: grid;
   color: white;
   gap: 32px;
@@ -49,4 +50,5 @@
 .container {
   padding: 48px 24px;
   text-align: center;
+  min-height: 1000px;
 }
