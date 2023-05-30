@@ -105,13 +105,22 @@ const Timeline: React.FC = () => {
             <h2>Production support</h2>
             <h3>Accenture Italy</h3>
             <h3> 2018 – 2022</h3>
+
             <p>
-              Project: Generali life insurances
-              <br /> Assisted clients with a diagnosis of software issues and concerns.
-              <br />
-              Collaborated with software developers to fix problems andimplement new functionality.
-              <br /> Backend and Frontend software debugging (Cobol and Java with Proprietary
-              software) with extensive use of Oracle SQL
+              As part of the Generali life insurance project, I provided invaluable assistance to
+              clients in diagnosing software issues and addressing their concerns. Collaborating
+              closely with software developers, I played a key role in fixing problems and
+              implementing new functionality.{' '}
+            </p>
+            <p>
+              My responsibilities included backend and frontend software debugging using Cobol and
+              Java, along with extensive utilization of Oracle SQL.{' '}
+            </p>
+            <p>
+              This experience sharpened my problem-solving skills, deepened my technical
+              proficiency, and provided valuable insights into the insurance industry. I take pride
+              in delivering effective solutions under challenging circumstances, making the Generali
+              life insurance project a significant milestone in my professional journey.
             </p>
           </div>
         </li>
@@ -120,17 +129,23 @@ const Timeline: React.FC = () => {
             <h2>User Interface Developer</h2>
             <h3>onrooby GmbH</h3>
             <h3> 15/08/2022 - 30/04/2023</h3>
+
             <p>
-              Designed and implemented user interfaces for online stores.
-              <br />
-              Further developed the UI/UX of the enterprise resource planning system.
-              <br />
-              Conducted user research and testing to improve userexperience.
-              <br />
-              Created wireframes, mockups, and prototypes to iterate ondesign solutions.
-              <br />I successfully achieved agreed goals, even under heavy work loads and changing
-              requirements, and always delivered high-quality work that met the company`s
-              expectations.
+              Throughout my professional journey, I have had the privilege of working on various
+              projects that allowed me to showcase my skills in designing and implementing user
+              interfaces for online stores. I have also had the opportunity to contribute to the
+              improvement of the UI/UX of an enterprise resource planning system.
+            </p>
+            <p>
+              By conducting user research and testing, I was able to enhance the overall user
+              experience. Creating wireframes, mockups, and prototypes has been a crucial part of my
+              design process, enabling me to iterate on design solutions effectively.
+            </p>
+            <p>
+              Despite heavy workloads and changing requirements, I successfully achieved agreed
+              goals and consistently delivered high-quality work that met and exceeded my company`s
+              expectations. My dedication and commitment to delivering exceptional results have been
+              instrumental in my professional growth.
             </p>
           </div>
         </li>
