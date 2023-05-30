@@ -1,18 +1,15 @@
-@import "./var.scss";
+@import './var.scss';
 
 .projects {
   min-height: 1000px;
   display: grid;
   color: white;
   gap: 32px;
-  margin: 24px;
-  @include for-tablet-landscape-up{
+  @include for-tablet-landscape-up {
     grid-template-columns: repeat(2, 1fr);
-
   }
-  @include for-desktop-up{
+  @include for-desktop-up {
     grid-template-columns: repeat(3, 1fr);
-
   }
 }
 .project {
@@ -20,7 +17,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding:  0 8px;
+  padding: 0 8px;
   justify-content: stretch;
   border-radius: 4px;
   &__title {
@@ -51,4 +48,14 @@
   padding: 48px 24px;
   text-align: center;
   min-height: 1000px;
+}
+.heading {
+  padding: 8px;
+  color: $color-primary;
+  font-size: xx-large;
+}
+.text{
+  padding: 0;
+  padding-bottom: 24px;
+color: $color-white;
 }

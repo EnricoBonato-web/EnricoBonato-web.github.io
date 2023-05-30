@@ -7,9 +7,23 @@ import { FaLinkedinIn } from 'react-icons/fa';
 const Contacts: FC = () => (
   <Planet planet="neptune" planetSize={200}>
     <div className={style.container}>
-      Contact:
-      <p>Email: enrico.bonato95@gmail.com</p>
-      <p>Github: EnricoBonato-web</p>
+      <h1>How to contact me?</h1>
+      <p>
+        <small>Phone:</small> +39 3496084343
+      </p>
+      <p>
+        <small>Github:</small>{' '}
+        <a
+          href="https://github.com/EnricoBonato-web"
+          style={{ color: 'white' }}
+          target="_blank"
+          rel="noopener noreferrer">
+          EnricoBonato-web
+        </a>
+      </p>
+      <p>
+        <small>Email:</small> enrico.bonato95@gmail.com
+      </p>
       <ul className={style.social}>
         <li>
           <a

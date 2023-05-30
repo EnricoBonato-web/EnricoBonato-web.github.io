@@ -2,6 +2,12 @@
 .container {
   color: $color-white;
   text-align: center;
+  background-color: $color-primary-darker;
+  border: 1px solid black;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: auto;
+  padding: 24px;
 }
 .social {
   list-style: none;

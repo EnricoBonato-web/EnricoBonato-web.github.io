@@ -21,6 +21,7 @@
   overflow: hidden;
   display: grid;
   max-width: 100%;
+  min-height: 400px;
   grid-template-columns: repeat(4, 1fr);
   @include for-phone-only{
     grid-template-columns: repeat(2, 1fr);}

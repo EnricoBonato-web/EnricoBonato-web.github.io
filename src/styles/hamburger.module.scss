@@ -55,7 +55,7 @@
     opacity: 0;
     transition: opacity 0.3s, visibility 0.3s;
     position: fixed;
-    top: 100px;
+    top: 50px;
     z-index: 100;
     color: $color-white;
     li{
@@ -71,7 +71,7 @@
     width: 100%;
     height: 100%;
     position: fixed;
-    top: 100px;
+    top: 50px;
     z-index: 100;
     background-color: $color-primary-darkest;
   }

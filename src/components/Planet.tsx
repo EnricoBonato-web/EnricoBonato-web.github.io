@@ -21,7 +21,9 @@ const Planet: React.FC<{ children: ReactNode; planet: string; planetSize: number
               topElement.getBoundingClientRect().top);
         setDiameter(newDiameter);
         setPosition(
-          (childElement.getBoundingClientRect().top || 0) - topElement.getBoundingClientRect().top
+          (childElement.getBoundingClientRect().top +
+            childElement.getBoundingClientRect().height / 8 || 0) -
+            topElement.getBoundingClientRect().top
         );
       }
     };
