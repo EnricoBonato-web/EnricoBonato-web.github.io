@@ -44,6 +44,18 @@ const Timeline: React.FC = () => {
             <h2>Degree in computer science.</h2>
             <h3>2009 - 2014</h3>
             <h3> ITIS Eugenio Barsant</h3>
+            <p>
+              I chose to attend a technical school because of my love for math and problem solving.
+            </p>
+            <p>
+              The intricacies of mathematics have always captivated me, and I enjoy the challenge of
+              finding logical solutions.
+            </p>
+            <p>
+              {' '}
+              Opting for a technical education allowed me to explore my passion for math while
+              gaining practical skills for problem-solving scenarios.
+            </p>
           </div>
         </li>
         <li>
@@ -52,6 +64,21 @@ const Timeline: React.FC = () => {
             <h3>2014 – 2018</h3>
             <h3>University of Padua</h3>
             <p>
+              During my time at university, I had the opportunity to expand my knowledge and skills
+              in various ways.{' '}
+            </p>
+            <p>
+              {' '}
+              The university provided me with a rich and diverse academic environment that fostered
+              intellectual growth and personal development.{' '}
+            </p>
+            <p>
+              {' '}
+              Engaging in rigorous coursework, I delved deeper into my chosen field of study and
+              gained a comprehensive understanding of the subject matter.
+            </p>
+            <p>
+              {' '}
               I worked in a group on several school projects, in some even as agroup leader,
               organizing the division of tasks and monitoring the quality of work and the
               achievement of objectives.
@@ -64,8 +91,12 @@ const Timeline: React.FC = () => {
             <h3>Retail Solutions S.R.L</h3>
             <h3>18/09/2017–11/11/2017</h3>
             <p>
-              Creation of a website using ASP.NET that analyzed the ticketing system used by the
-              company and showed various information withgraphs and tables.
+              During a two-month internship, I had the invaluable opportunity to apply my academic
+              knowledge in a practical setting and gain real-world experience.
+            </p>
+            <p>
+              In this period i created a website using ASP.NET that analyzed the ticketing system
+              used by the company and showed various information with graphs and tables.
             </p>
           </div>
         </li>
@@ -79,7 +110,7 @@ const Timeline: React.FC = () => {
               <br /> Assisted clients with a diagnosis of software issues and concerns.
               <br />
               Collaborated with software developers to fix problems andimplement new functionality.
-              <br /> Backend and Frontend software debugging (Cobol and Java withProprietary
+              <br /> Backend and Frontend software debugging (Cobol and Java with Proprietary
               software) with extensive use of Oracle SQL
             </p>
           </div>
@@ -97,8 +128,8 @@ const Timeline: React.FC = () => {
               Conducted user research and testing to improve userexperience.
               <br />
               Created wireframes, mockups, and prototypes to iterate ondesign solutions.
-              <br />I successfully achieved agreed goals, even under heavy workloadsand changing
-              requirements, and always delivered high-quality workthat met the company`s
+              <br />I successfully achieved agreed goals, even under heavy work loads and changing
+              requirements, and always delivered high-quality work that met the company`s
               expectations.
             </p>
           </div>
