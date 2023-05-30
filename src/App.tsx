@@ -44,7 +44,7 @@ const App: React.FC = () => {
         <div id="top"></div>
         <div className={styles.sections}>
           <section ref={section1Ref} className={'section ' + styles.section}>
-            <Hero f={() => scrollToSection(section5Ref)} />
+            <Hero f={() => scrollToSection(section6Ref)} />
           </section>
           <section ref={section2Ref} className={'section ' + styles.section}>
             <About />
