@@ -48,6 +48,9 @@
   padding: 48px 24px;
   text-align: center;
   min-height: 1000px;
+  @include for-phone-only {
+    padding: 0;
+  }
 }
 .heading {
   padding: 8px;

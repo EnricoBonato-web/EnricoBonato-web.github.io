@@ -15,14 +15,20 @@
   p {
     text-align: center;
   }
-  word-break:break-all;
+  word-break: break-all;
+  @include for-phone-only {
+    padding: 20px;
+  }
 }
 .container {
   overflow: hidden;
   display: grid;
   max-width: 100%;
+  max-width: 800px;
+  margin: auto;
   min-height: 400px;
   grid-template-columns: repeat(4, 1fr);
-  @include for-phone-only{
-    grid-template-columns: repeat(2, 1fr);}
+  @include for-phone-only {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
