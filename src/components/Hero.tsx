@@ -11,7 +11,7 @@ const Hero: FC<HeroProps> = ({ f }) => {
     <section className={styles.hero}>
       <Planet planet="mercury" planetSize={100}>
         <div className={styles.heroContent}>
-          <img src="./LogoWhite.png" alt="EnricoBonato" className={styles.logo} />
+          <img src="./logoWhite.png" alt="EnricoBonato" className={styles.logo} />
           <p className={styles.heroText}>
             Italian developer with a bachelor`s degree in computer science, a passion for Web
             Developing, and a great desire to learn.
