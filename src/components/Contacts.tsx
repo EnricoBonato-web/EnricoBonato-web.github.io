@@ -58,7 +58,7 @@ const Contacts: FC = () => (
         </li>
       </ul>
       <a
-        href="http://enricobonato-web.github.io/assets/EnricoBonatoCV.pdf"
+        href="http://enricobonato-web.github.io/EnricoBonatoCV.pdf"
         download="EnricoBonatoCV.pdf"
         className={style.button}
       >
