@@ -1,5 +1,3 @@
-@import './var.scss';
-
 * {
   z-index: 1;
 }
@@ -19,7 +17,7 @@ main {
 
 .title {
   font-size: 24px;
-  color: $color-gray-dark;
+  color: #323a45;
 }
 
 .header {
@@ -47,8 +45,9 @@ main {
 .logo {
   max-height: 45px;
   padding: 0 100px;
-
-  @include for-phone-only {
+}
+@media (max-width: 599px) {
+  .logo {
     padding: 0 30px;
   }
 }
@@ -57,12 +56,11 @@ main {
   display: flex;
   flex-direction: column;
   gap: 300px;
-  background-color: $color-primary-darkest;
+  background-color: #041431;
   z-index: -100;
   padding: 0;
   position: absolute;
   overflow: hidden;
-
   max-width: 100%;
 }
 
@@ -72,7 +70,7 @@ main {
   border-top: 0.25px solid rgba(255, 255, 255, 0.1);
   border-left: 0.25px solid rgba(255, 255, 255, 0.1);
   animation: MoveUpDown 4s linear infinite;
-  box-shadow: 1px 1px 400px 1px $color-white;
+  box-shadow: 1px 1px 400px 1px #ffffff;
   z-index: 2;
   position: absolute;
   top: max(-50%, -250px);
@@ -88,4 +86,4 @@ main {
 
 .sun_container {
   width: 100%;
-}
+}/*# sourceMappingURL=app.module.css.map */
